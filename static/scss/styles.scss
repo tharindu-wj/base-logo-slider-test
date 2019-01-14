@@ -1,0 +1,59 @@
+/*
+ * @company name : Eight25Media
+ * @auther : Tharindu Wickramasinghe
+ * @date : 10/04/2018
+ * @description : Logo slider .
+ */
+$package_name : 'base';
+$extension_name : 'sliders';
+$shortcode_name : 'logo-slider';
+$shortcode_base_class : '.base-sliders-logo-slider';
+
+.base-sliders-logo-slider{
+  &__heading{
+    text-align: center;
+  }
+
+  &__inner{
+    &__slide{
+      position: relative;
+
+      &__image {
+        margin: auto;
+      }
+      &__thumnail {
+        min-height: 100px;
+        background-size: cover;
+        background-position: top center;
+      }
+      &__title{
+        text-align: center;
+      }
+      &__caption{
+        text-align: center;
+      }
+      &__popup{
+        position: absolute;
+        top: 0;
+        z-index: 1000;
+        visibility: hidden;
+      }
+      &:hover .base-sliders-logo-slider__inner__slide__popup{
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.slick-slide:focus { outline: none !important; }
+
+//Slick Slider Arrows
+.slick-prev:before, .slick-next:before {
+  color: #000000;
+}
+.slick-next{
+  right: -10px;
+}
+.slick-prev{
+  left: -10px;
+}
